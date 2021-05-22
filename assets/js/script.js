@@ -11,17 +11,24 @@ $(document).ready(function () {
 
 var input_textarea1 = document.querySelector('#note1');
 var save_button1 = document.querySelector('#saveNote1');
-
-
-
 input_textarea1.value = localStorage.getItem('content1');
 
 //when the Submit button is clicked, store the input of the textarea
-
 saveNote1.addEventListener('click', updateOutput1);
 
 //sets the input of text area into local storage
-
 function updateOutput1() {
     localStorage.setItem('content1', input_textarea1.value);
+};
+
+
+
+var input_textarea2 = document.querySelector('#note2');
+var save_button2 = document.querySelector('#saveNote2');
+input_textarea2.value = localStorage.getItem('content2');
+
+saveNote2.addEventListener('click', updateOutput2);
+
+function updateOutput2() {
+	localStorage.setItem('content2', input_textarea2.value);
 };
