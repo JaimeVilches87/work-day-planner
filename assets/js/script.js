@@ -50,3 +50,8 @@ $(document).ready(function () {
     }
     setInterval(hourUpdate, 500)
 });
+
+$("#clear").click(function() {
+    localStorage.clear();
+    location.reload()
+});
